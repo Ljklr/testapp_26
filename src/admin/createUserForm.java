@@ -6,14 +6,13 @@
 package admin;
 
 
-import testapp_26.regForm;
 import static testapp_26.regForm.email;
 import static testapp_26.regForm.username;
 import config.dbConnector;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import user.usersForm;
+
 
 /**
  *
@@ -377,7 +376,7 @@ public boolean updateCheck(){
                 + "VALUES('"+fn.getText()+"','"+ln.getText()+"','"+em.getText()+"','"+un.getText()+"','"+ps.getText()+"','"+ut.getSelectedItem()+"','"+us.getSelectedItem()+"')"))
         {
             JOptionPane.showMessageDialog(null,"Inserted Sucessfull!");
-            usersForm uf = new usersForm();
+            UsersForm uf = new UsersForm();
             uf.setVisible(true);
             this.dispose();
         }else{
@@ -404,7 +403,7 @@ public boolean updateCheck(){
     }//GEN-LAST:event_refreshActionPerformed
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-        usersForm usf = new usersForm();
+        UsersForm usf = new UsersForm();
         usf.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_cancelActionPerformed
@@ -431,7 +430,7 @@ public boolean updateCheck(){
                + "u_password = '"+ps.getText()+"',u_type = '"+ut.getSelectedItem()+"',"
                + "u_status = '"+us.getSelectedItem()+"' WHERE u_id = '"+uid.getText()+"' ");
             
-            usersForm uf = new usersForm();
+            UsersForm uf = new UsersForm();
             uf.setVisible(true);
             this.dispose();
         }
